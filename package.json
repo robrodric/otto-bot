@@ -1,0 +1,23 @@
+{
+  "name": "otto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.10.2",
+    "common-tags": "^1.8.2",
+    "discord.js": "^14.6.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsdom": "^20.0.1",
+    "mongoose": "^6.7.0",
+    "request": "^2.88.2",
+    "undici": "^5.12.0"
+  }
+}
