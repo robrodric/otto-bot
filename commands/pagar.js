@@ -8,7 +8,7 @@ module.exports = {
 		.setName('pagar')
 		.setDescription('[💸 » Economia] - Comando para pagar um usuário.')
         .addUserOption(option => option.setName('usuário').setDescription('Mencione o usuário').setRequired(true))
-        .addIntegerOption(option => option.setName('quantidade').setDescription('Quantidade de robrocoins que você quer pagar.').setRequired(true)),
+        .addIntegerOption(option => option.setName('quantidade').setDescription('Quantidade de pixels que você quer pagar.').setRequired(true)),
   
 	async execute(interaction, client) {
 
@@ -37,14 +37,14 @@ const pagamento = new EmbedBuilder()
 
  
 if (quantidade > 0 ) {
-    if (quantidade > data.coins) {
+    if (quantidade > data.pixels) {
         interaction.reply("Você não tem Pixels suficientes.")
     }
     if (quantidade < 0) {
         interaction.reply("Você não tem pode enviar esse número de Pixels.")
     }
-data.coins -= quantidade;
-give.coins += quantidade;
+data.pixels -= quantidade;
+give.pixels += quantidade;
 
 data.save()
 give.save()

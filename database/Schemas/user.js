@@ -6,13 +6,10 @@ const schema = mongoose.Schema({
     match: /^\d{17,19}$/,
   },
   blacklisted: {
-    type: Boolean},
-  premium: {
-    type: Boolean,
-    default: 0
+    type: Boolean
   },
   premium: {
-    type: Number,
+    type: Boolean,
     default: 0
   },
   pixels: {
@@ -23,8 +20,8 @@ const schema = mongoose.Schema({
     type: Number
   },
   sobre: {
-    type: Number,
-    default: 0
+    type: String,
+    default: "Conte mais sobre você aqui!"
   },
 
 })

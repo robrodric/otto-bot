@@ -7,7 +7,7 @@ const ms = require('parse-ms-2')
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('trabalhar')
-		.setDescription('[💸 » Economia] - Comando para trabalhar e ganhar robrocoins.'),
+		.setDescription('[💸 » Economia] - Comando para trabalhar e ganhar pixels.'),
   
 	async execute(interaction, client) {
 
@@ -61,14 +61,14 @@ return interaction.reply({embeds: [ exampleEmbedA
 }
 
     data.daily = Date.now()
-data.coins += randomAmount
+data.pixels += randomAmount
 await data.save() 
 const exampleEmbedR = new EmbedBuilder()
 	.setColor('#005fff')
 	.setTitle(`💸 Salário de ${user.tag}`)
   .setDescription(`Você trabalhou na área de **${emprego}** e ganhou ${randomAmount} <:pixels:1037915050746335335>!`)
 .setThumbnail(user.displayAvatarURL())
-.setFooter({text: "Dica: Use robrocoins para comprar itens na /loja"})
+.setFooter({text: "Dica: Use pixels para comprar itens na /loja"})
 interaction.reply({embeds: [ exampleEmbedR
   //{
   //"title": `💸 Salário de ${user.tag}`,

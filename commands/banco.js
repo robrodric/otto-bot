@@ -6,7 +6,7 @@ const discord = require('discord.js')
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('banco')
-		.setDescription('[💸 » Economia] - Mostra todos os robrocoins na sua conta bancária.')
+		.setDescription('[💸 » Economia] - Mostra todos os pixels da sua conta bancária.')
     .addUserOption(option => option.setName('usuário').setDescription('Mencione o usuário.').setRequired(false))
   ,
   
@@ -27,7 +27,7 @@ console.log(e)
 const exampleEmbed = new EmbedBuilder()
 	.setColor('#005fff')
 	.setTitle(`🏦 Banco de ${user.tag}`)
-  .setDescription(`**${user.username}** tem **${data.coins}** <:pixels:1037915050746335335>!`)
+  .setDescription(`**${user.username}** tem **${data.pixels}** <:pixels:1037915050746335335>!`)
   .setThumbnail(user.displayAvatarURL())
   .setFooter({text: "Dica: Use /trabalhar para conseguir Pixels!"})
 

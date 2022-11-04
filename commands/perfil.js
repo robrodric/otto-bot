@@ -25,6 +25,7 @@ module.exports = {
 	}
 
 	let owner = '655176205171163138'
+	let staff = '999'
 
 		const fetched = await user.fetch(user.hexAccentColor)
 		console.log(fetched)
@@ -51,8 +52,8 @@ module.exports = {
         canvas.context.fillRect(50,280, 500, 2)
 
 		const avatar = await Canvas.loadImage(avatarURL)
-		const robrocoins = await Canvas.loadImage('./img/pixels.png')
-		canvas.context.drawImage(robrocoins, 50, 325, 50, 50)
+		const pixels = await Canvas.loadImage('./img/pixels.png')
+		canvas.context.drawImage(pixels, 50, 325, 50, 50)
 
 		canvas.context.fillStyle = '#282A2D'
         canvas.context.fillRect(50,400, 500, 2)
@@ -100,7 +101,7 @@ module.exports = {
 		canvas.context.clip()
 		canvas.context.drawImage(avatar, 44, 40, 160, 160)
 
-        let att = new AttachmentBuilder(canvas.create.toBuffer(), `perfil-${user}.png`)
+        let att = new AttachmentBuilder(canvas.create.toBuffer(), `profile.png`)
 		await interaction.reply({files: [att]})
 	},
 };
